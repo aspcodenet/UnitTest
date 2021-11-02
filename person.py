@@ -1,7 +1,15 @@
 class Person:
-    def __init__(self,name:str,personNumber:str):
-        self._name=name
+    def __init__(self,personNumber:str):
+        self._name=""
         self._personalNumber = personNumber
+
+    def setName(self,name:str)->bool:
+        if len(name) < 2:
+            return False
+        if len(name) > 50:
+            return False
+        self._name = name
+        return True
 
     def getName(self):
         return self._name
