@@ -5,9 +5,9 @@ class Person:
 
     def setName(self,name:str)->bool:
         if len(name) < 2:
-            return False
+             return False
         if len(name) > 50:
-            return False
+             return False
         self._name = name
         return True
 
@@ -32,3 +32,9 @@ class PersonRegister:
             return False
         self._persons[person.getPersonalNumber()] = person
         return True
+
+# personReg = PersonRegister()
+# res1  = personReg.add(Person("19720803-0000"))
+# res2 = personReg.add(Person("19720803-2800"))
+# print(res1)
+# print(res2)
